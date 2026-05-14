@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 180" width="900" height="180" role="img" aria-label="About Luciano Ditzel">
+  <defs>
+    <style>
+      @keyframes in { from { opacity:0; transform:translateY(12px) } to { opacity:1; transform:none } }
+      @keyframes cursor { 0%,45% { opacity:1 } 55%,100% { opacity:0 } }
+
+      .bg    { fill: #0f0f12 }
+      .frame { fill: none; stroke: #26262d; stroke-width: 1 }
+      .dot-r { fill: #ff5f57 }
+      .dot-y { fill: #ffbd2e }
+      .dot-g { fill: #28c840 }
+      .bar   { fill: #1a1a1f }
+      .title { font: 400 11px/1 'Courier New',Courier,monospace; fill: #6a6a73 }
+      .prompt{ font: 700 13px/1 'Courier New',Courier,monospace; fill: #f4b740;
+               opacity:0; animation: in .5s .1s ease-out forwards }
+      .cmd   { font: 400 13px/1 'Courier New',Courier,monospace; fill: #d4d4d8;
+               opacity:0; animation: in .5s .3s ease-out forwards }
+      .out   { font: 400 13px/1.7 'Courier New',Courier,monospace; fill: #8a8a93;
+               opacity:0; animation: in .5s .55s ease-out forwards }
+      .hl    { fill: #f4b740 }
+      .blink { font: 700 13px/1 'Courier New',Courier,monospace; fill: #f4b740;
+               animation: cursor 1.1s ease-in-out infinite }
+
+      @media (prefers-color-scheme: light) {
+        .bg    { fill: #f5f5f4 }
+        .bar   { fill: #e8e8e6 }
+        .frame { stroke: #d4d4cc }
+        .title { fill: #9a9aa0 }
+        .cmd   { fill: #3a3a44 }
+        .out   { fill: #6a6a73 }
+      }
+    </style>
+  </defs>
+
+  <!-- Terminal window -->
+  <rect class="bg"    width="900" height="180" rx="12"/>
+  <rect class="frame" width="899" height="179" rx="12" x=".5" y=".5"/>
+
+  <!-- Title bar -->
+  <rect class="bar" x="1" y="1" width="898" height="36" rx="11"/>
+  <rect class="bar" x="1" y="25" width="898" height="12"/>
+
+  <!-- Traffic lights -->
+  <circle class="dot-r" cx="28" cy="19" r="6"/>
+  <circle class="dot-y" cx="48" cy="19" r="6"/>
+  <circle class="dot-g" cx="68" cy="19" r="6"/>
+
+  <!-- Tab title -->
+  <text class="title" x="450" y="23" text-anchor="middle">about.txt — lditzel94</text>
+
+  <!-- Shell content -->
+  <text class="prompt" x="28" y="62">lditzel94:~$</text>
+  <text class="cmd"    x="136" y="62">cat about.txt</text>
+
+  <text class="out" x="28" y="90">
+    <tspan x="28">Backend engineer who designs systems that survive the next 10x.</tspan>
+    <tspan x="28" dy="20">
+      <tspan class="hl">Kotlin</tspan> and <tspan class="hl">Java</tspan> for production, <tspan class="hl">Go</tspan> when it needs to be lean, <tspan class="hl">AWS</tspan> everywhere.
+    </tspan>
+    <tspan x="28" dy="20">
+      7 years · 3 companies · 2 fintech platforms · 1 automotive platform · counting.
+    </tspan>
+  </text>
+
+  <!-- Blinking cursor -->
+  <text class="blink" x="28" y="152">▋</text>
+</svg>
